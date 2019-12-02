@@ -1,0 +1,32 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBorder": "#3773aabb",
+        "activityBar.activeBackground": "#639fd6c0",
+        "window.activeBorder": "#3773aa",
+        "window.inactiveBorder": "#444444"
+    },
+    "files.associations": {
+        "*.html": "html"
+    },
+    "editor.minimap.enabled": false,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "eslint.alwaysShowStatus": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "autoFix": true,
+            "language": "typescript"
+        }
+    ],
+}

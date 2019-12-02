@@ -25,7 +25,7 @@ createConnection().then(connection => {
   });
 
   app.patch('/users/:id', async (request: Request, response: Response) => {
-    const result = await userService.patchUser(parseInt(request.params.id), request.body);
+    const result = await userService.patchUser(request.body);
     return response.send(result);
   });
 

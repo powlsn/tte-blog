@@ -2,7 +2,7 @@ import { Connection, DeleteResult } from 'typeorm';
 import { User } from '../entity/User';
 
 export class UserService {
-  constructor(readonly connection: Connection) {}
+  constructor(readonly connection: Connection) { }
 
   private userRepository = this.connection.getRepository(User);
 
@@ -19,8 +19,8 @@ export class UserService {
     return await this.userRepository.save(created);
   }
 
-  public async patchUser(id: number, user: User): Promise<User> {
-    const patch = await this.userRepository.findOne(id);
+  public async patchUser(user: User): Promise<User> {
+    const patch = await this.userRepository.findOne(user.id);
     this.userRepository.merge(patch, user);
     return await this.userRepository.save(patch);
   }
